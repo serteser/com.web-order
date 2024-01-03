@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class WO_012_VOA_03 extends Hooks {
 
     @Test
-    public void verifyDeleteFunctionalityInViewAllOrderPage() {
+    public void verifyDeleteFunctionalityInViewAllOrderPage() throws InterruptedException {
 
         WebElement webOrderTab = driver.findElement(By.xpath("//a[@href='/weborder']"));
         webOrderTab.click();
@@ -53,8 +54,14 @@ public class WO_012_VOA_03 extends Hooks {
             }
         }
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scroll(0,500)");
+        Thread.sleep(500);
+
         WebElement deleteButton = driver.findElement(By.cssSelector("[class='btn btn-danger fs-4 text-white ']"));
         deleteButton.click();
+
+        Thread.sleep(3000);
 
         checkboxes = driver.findElements(By.cssSelector("[type='checkbox']:nth-child(1)"));
 

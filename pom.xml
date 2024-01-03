@@ -77,6 +77,7 @@
                         <include>**/*WO_011_VAO_02.java</include>
                         <include>**/*WO_012_VAO_03.java</include>
                         <include>**/*WO_013_TB_01.java</include>
+                        <include>**/*WO_014_VCF_01.java</include>
                     </includes>
                 </configuration>
             </plugin>

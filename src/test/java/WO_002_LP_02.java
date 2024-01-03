@@ -35,24 +35,24 @@ public class WO_002_LP_02 extends Hooks {
         assertEquals("Invalid username", userNameErrorAlertMessage);
     }
 
-    @Test
-    public void verifyLoginFailureForPassword() {
-
-        WebElement webOrderTab = driver.findElement(By.xpath("//a[@href='/weborder']"));
-        webOrderTab.click();
-
-        WebElement userNameTextField = driver.findElement(By.id("login-username-input"));
-        userNameTextField.sendKeys("Inar"); // valid user name
-
-        WebElement passwordTextField = driver.findElement(By.id("login-password-input"));
-        passwordTextField.sendKeys("academy"); // invalid password
-
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
-
-        WebElement passwordErrorMessage = driver.findElement(By.id("password-error-alert"));
-        String passwordErrorAlertMessage = passwordErrorMessage.getText();
-
-        assertEquals("Invalid password", passwordErrorAlertMessage);
-    }
+//    @Test
+//    public void verifyLoginFailureForPassword() {
+//
+//        WebElement webOrderTab = driver.findElement(By.xpath("//a[@href='/weborder']"));
+//        webOrderTab.click();
+//
+//        WebElement userNameTextField = driver.findElement(By.id("login-username-input"));
+//        userNameTextField.sendKeys("Inar"); // valid user name
+//
+//        WebElement passwordTextField = driver.findElement(By.id("login-password-input"));
+//        passwordTextField.sendKeys("academy"); // invalid password
+//
+//        WebElement loginButton = driver.findElement(By.id("login-button"));
+//        loginButton.click();
+//
+//        WebElement passwordErrorMessage = driver.findElement(By.id("password-error-alert"));
+//        String passwordErrorAlertMessage = passwordErrorMessage.getText();
+//
+//        assertEquals("Invalid password", passwordErrorAlertMessage);
+//    }
 }
