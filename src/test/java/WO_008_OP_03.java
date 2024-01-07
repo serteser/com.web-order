@@ -54,7 +54,7 @@ public class WO_008_OP_03 extends Hooks {
         WebElement discountInputTextField = driver.findElement(By.id("discountInput"));
         discountInputTextField.sendKeys("20");
 
-        WebElement calculateButton = driver.findElement(By.cssSelector("[class=' fs-4 mt-4 fw-bold text-decoration-none border-none btn-primary text-fifth btn']"));
+        WebElement calculateButton = driver.findElement(By.xpath("//button[contains(text(),'Calculate')]"));
         calculateButton.click();
 
         WebElement nameTextField = driver.findElement(By.cssSelector("#name"));

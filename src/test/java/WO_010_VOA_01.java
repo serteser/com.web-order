@@ -35,14 +35,14 @@ public class WO_010_VOA_01 extends Hooks {
         WebElement viewAllOrdersTab = driver.findElement(By.cssSelector("[href='/weborder/view-orders']"));
         viewAllOrdersTab.click();
 
-        WebElement addMoreDataButton = driver.findElement(By.cssSelector("[class='fs-4 btn btn-primary text-fifth me-3']"));
+        WebElement addMoreDataButton = driver.findElement(By.xpath("//button[contains(text(),'Add More Data')]"));
 
         for (int i = 0; i < 4; i++) {
 
             addMoreDataButton.click();
         }
 
-        WebElement checkAllButton = driver.findElement(By.cssSelector("[class='btn btn-success fs-4 text-fifth me-3']"));
+        WebElement checkAllButton = driver.findElement(By.xpath("//button[contains(text(),'Check All')]"));
         checkAllButton.click();
 
         List<WebElement> checkboxes = driver.findElements(By.cssSelector("[type='checkbox']:nth-child(1)"));
